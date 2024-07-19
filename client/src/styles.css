@@ -1,0 +1,36 @@
+.expense-category-cards, .dashboard-widgets {
+  display: grid;
+  column-gap: 1.5rem;
+  row-gap: 1.5rem;
+}
+
+.expense-category-cards {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.dashboard-widgets {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.expense-category-card:hover {
+  cursor: pointer;
+}
+
+.error-message-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: absolute;
+  top: '60px';
+  left: 0;
+  right: 0;
+  height: calc(100vh - 60px);
+}
+
+@media (max-width: 992px) {
+  .expense-category-cards, .dashboard-widgets {
+    grid-template-columns: 1fr;
+  }
+}
